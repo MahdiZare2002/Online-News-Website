@@ -72,7 +72,7 @@ spl_autoload_register(function ($className) {
 
 function jalaliDate($date)
 {
-        return \Parsidev\Jalali\jDate::forge($date)->format('date');
+        return \Parsidev\Jalali\jDate::forge($date)->format('%A, %d %B %Y');
 }
 
 

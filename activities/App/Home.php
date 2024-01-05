@@ -25,7 +25,7 @@ class Home
 
         $sidebarBanner = $db->select('SELECT * FROM banners LIMIT 1,2')->fetch();
 
-        $mostCommentPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts ORDER BY comments_count DESC LIMIT 0,3')->fetchAll();
+        $mostCommentsPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts ORDER BY comments_count DESC LIMIT 0,3')->fetchAll();
 
 
 
@@ -40,7 +40,7 @@ class Home
 
         $sidebarBanner = $db->select('SELECT * FROM banners LIMIT 0,1')->fetch();
 
-        $mostCommentPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts ORDER BY comments_count DESC LIMIT 0,3')->fetchAll();
+        $mostCommentsPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts ORDER BY comments_count DESC LIMIT 0,3')->fetchAll();
 
         $topSelectedPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts  WHERE posts.selected = 1 ORDER BY created_at DESC LIMIT 0,3')->fetchAll();
 
@@ -48,7 +48,7 @@ class Home
 
         $comments = $db->select('SELECT *,(SELECT username FROM users WHERE users.id = comments.user_id) AS username FROM comments WHERE post_id = ? AND status = "approved"', [$id])->fetchAll();
 
-        require_once(BASE_PATH . '/template/app/show.php');
+        require_once(BASE_PATH . '/template/app/show-post.php');
     }
 
     public function category($id)
@@ -62,7 +62,7 @@ class Home
 
         $breakingNews = $db->select('SELECT * FROM posts WHERE breaking_news = 1 ORDER BY created_at DESC LIMIT 0,1')->fetch();
 
-        $mostCommentPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts ORDER BY comments_count DESC LIMIT 0,3')->fetchAll();
+        $mostCommentsPosts = $db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts ORDER BY comments_count DESC LIMIT 0,3')->fetchAll();
 
         $setting = $db->select('SELECT * FROM websetting')->fetch();
         $menus = $db->select('SELECT * FROM menus WHERE parent_id IS NULL')->fetchAll();
@@ -73,14 +73,13 @@ class Home
 
         $categoryPosts = $db->select('SELECT posts.* , (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count , (SELECT username FROM users WHERE users.id = posts.user_id) AS username , (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts WHERE cat_id = ? ORDER BY created_at DESC LIMIT 0,6', [$id])->fetchAll();
 
-        require_once(BASE_PATH . '/template/app/category.php');
-
+        require_once(BASE_PATH . '/template/app/show-category.php');
     }
 
-   
 
 
-    
+
+
 
     public function commentStore($request, $post_id)
     {
