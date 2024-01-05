@@ -1,16 +1,15 @@
 <h1 align="center" id="title">Online News Website</h1>
 
-<p align="center"><img src="https://socialify.git.ci/MahdiZare2002/Online-News-Website/image?font=Inter&amp;language=1&amp;name=1&amp;owner=1&amp;theme=Light" alt="project-image"></p>
 
 <p id="description">Welcome to the PHP News Site project! This project is designed to help you create a robust and feature-rich news website using PHP. Whether you're building a news site for a specific niche or a general news platform this project provides a solid foundation for managing popular news breaking news and the latest updates. It also comes with an advanced admin panel for easy content management.</p>
 
 <h2>Project Screenshots:</h2>
 
-<img src=".\public\screenshots\login.png" alt="project-screenshot" width="1000" height="400/">
-<img src=".\public\screenshots\home.png" alt="project-screenshot" width="1000" height="400/">
-<img src=".\public\screenshots\posts.png" alt="project-screenshot" width="1000" height="400/">
-<img src=".\public\screenshots\blog-1.png" alt="project-screenshot" width="1000" height="400/">
-<img src=".\public\screenshots\blog-2.png" alt="project-screenshot" width="1000" height="400/">
+<img src=".\public\screenshots\login.png" alt="project-screenshot" width="800" height="400/">
+<img src=".\public\screenshots\home.png" alt="project-screenshot" width="800" height="400/">
+<img src=".\public\screenshots\posts.png" alt="project-screenshot" width="800" height="400/">
+<img src=".\public\screenshots\blog-1.png" alt="project-screenshot" width="800" height="400/">
+<img src=".\public\screenshots\blog-2.png" alt="project-screenshot" width="800" height="400/">
 
   
   
