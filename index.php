@@ -49,14 +49,6 @@ require_once 'activities/Admin/Websetting.php';
 //app
 require_once 'activities/App/Home.php';
 
-
-
-
-
-// $db = new database\Database();
-// $db = new database\CreateDB();
-// $db->run();
-
 //auth
 require_once 'activities/Auth/Auth.php';
 
@@ -67,17 +59,11 @@ spl_autoload_register(function ($className) {
         include $path . $className . '.php';
 });
 
-// $auth = new Auth();
-// $auth->sendMail('testphp575@gmail.com', 'first test', '<p>Hello My Love</p>');
-
 function jalaliDate($date)
 {
         return \Parsidev\Jalali\jDate::forge($date)->format('%A, %d %B %Y');
 }
 
-
-// uri('admin/category', 'Category', 'index');
-// uri('admin/category/store', 'Category', 'store', 'POST');
 function uri($reservedUrl, $class, $method, $requestMethod = 'GET')
 {
 
@@ -115,12 +101,6 @@ function uri($reservedUrl, $class, $method, $requestMethod = 'GET')
         call_user_func_array(array($object, $method), $parameters);
         exit();
 }
-// admin/category/edit/{id} reserved url
-// admin/category/delete/{id} reserved url
-// admin/category/edit/5 current url 
-// admin/category/edit/5 current url 
-// uri('admin/category', 'Category', 'index');
-
 
 //helpers
 
@@ -196,11 +176,6 @@ function flash($name, $value = null)
                 $_SESSION['flash_message'][$name] = $value;
         }
 }
-// flash('login_error', 'ورود با خطا مواجه شد');
-// flash('cart_success', 'محصول با موفقیت به سبد خرید شما اضافه شد');
-// echo flash('login_error');
-// echo flash('cart_success');
-
 
 function dd($var)
 {
