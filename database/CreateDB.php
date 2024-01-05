@@ -81,15 +81,6 @@ class CreateDB extends Database
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
           ",
   ];
-
-  private $tableInitializes = [
-    ['table' => 'users', 'fields' => [
-      'username', 'email', 'password', 'permission'
-    ], 'values' => [
-      'hassank2', 'hassan@yahoo.com', '21211221', 'admin'
-    ]]
-  ];
-
   public function run()
   {
     foreach ($this->createTableQueries as $query) {
