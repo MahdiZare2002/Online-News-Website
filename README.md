@@ -33,7 +33,7 @@ Here're some of the project's best features:
 <p>3. Clone the repository to your local machine:</p>
 
 ```
-git clone https://github.com/your-username/Online-News-Website.git
+git clone https://github.com/MahdiZare2002/Online-News-Website.git
 ```
 
 <p>4. extract files in C:\xampp\htdocs.</p>
