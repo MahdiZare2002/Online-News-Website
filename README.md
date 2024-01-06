@@ -32,15 +32,14 @@ Here're some of the project's best features:
 
 <p>3. Clone the repository to your local machine:</p>
 
-```
+```console
 git clone https://github.com/MahdiZare2002/Online-News-Website.git
 ```
 
 <p>4. extract files in C:\xampp\htdocs.</p>
 
-```
-The project name must be `Online-News-Website`
-```
+> [!NOTE]
+> The project name must be **Online-News-Website**
 
 <p>5. open project on localhost/phpmyadmin</p>
 
@@ -56,11 +55,10 @@ The project name must be `Online-News-Website`
 
 <p>11. first register and then login</p>
 
-```
-Don't forget to configure your database information in the index.php  And also mail configuration in the index.php ( I used mailtrap )
-```
+> [!IMPORTANT]
+> Don't forget to configure your database information in the index.php  And also mail configuration in the index.php ( I used mailtrap )
 
-  
+ 
   
 <h2>💻 Built with</h2>
 
@@ -72,7 +70,7 @@ Technologies used in the project:
 
 <h2>🛡️ License:</h2>
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](/LICENSE).
 
 <h2>💖Like my work?</h2>
 
