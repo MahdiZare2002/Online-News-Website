@@ -38,9 +38,8 @@ git clone https://github.com/MahdiZare2002/Online-News-Website.git
 
 <p>4. extract files in C:\xampp\htdocs.</p>
 
-```
-The project name must be `Online-News-Website`
-```
+> [!NOTE]
+> The project name must be **Online-News-Website**
 
 <p>5. open project on localhost/phpmyadmin</p>
 
@@ -56,11 +55,10 @@ The project name must be `Online-News-Website`
 
 <p>11. first register and then login</p>
 
-```
-Don't forget to configure your database information in the index.php  And also mail configuration in the index.php ( I used mailtrap )
-```
+> [!IMPORTANT]
+> Don't forget to configure your database information in the index.php  And also mail configuration in the index.php ( I used mailtrap )
 
-  
+ 
   
 <h2>💻 Built with</h2>
 
