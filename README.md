@@ -32,7 +32,7 @@ Here're some of the project's best features:
 
 <p>3. Clone the repository to your local machine:</p>
 
-```
+```console
 git clone https://github.com/MahdiZare2002/Online-News-Website.git
 ```
 
